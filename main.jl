@@ -18,7 +18,7 @@ function main()
     print(" Aproximação Linear")
     print(" Coeficientes Gradiente = ", gr, " Coeficientes Newton = ", nt)
     print(" Erro Absoluto Gradiente = ", sqrt(sum((A*gr - y).^2)),
-    " Erro Absoluto Newton =", sqrt(sum((A*nt - y).^2)))
+          " Erro Absoluto Newton =", sqrt(sum((A*nt - y).^2)))
     print(" Erro Relativo Gradiente = ", errograd, " Erro Relativo Newton = ", erronewt)
 
 
@@ -41,7 +41,7 @@ function main()
     print(" Aproximação Quadrática")
     print(" Coeficientes Gradiente = ", gr, " Coeficientes Newton = ", nt)
     print(" Erro Absoluto Gradiente = ", sqrt(sum((A*gr - y).^2)),
-    " Erro Absoluto Newton =", sqrt(sum((A*nt - y).^2)))
+          " Erro Absoluto Newton =", sqrt(sum((A*nt - y).^2)))
     print(" Erro Relativo Gradiente = ", errograd, " Erro Relativo Newton = ", erronewt)
 
     scatter(x, y, title = "Contaminados COVID-19",label = "Casos por Semana", lw = 3)
@@ -66,7 +66,7 @@ function main()
     print(" Aproximação Cúbica")
     print(" Coeficientes Gradiente = ", gr, " Coeficientes Newton = ", nt)
     print(" Erro Absoluto Gradiente = ", sqrt(sum((A*gr - y).^2)),
-    " Erro Absoluto Newton =", sqrt(sum((A*nt - y).^2)))
+          " Erro Absoluto Newton =", sqrt(sum((A*nt - y).^2)))
     print(" Erro Relativo Gradiente = ", errograd, " Erro Relativo Newton = ", erronewt)
 
 
