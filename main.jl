@@ -22,11 +22,11 @@ function main()
     print(" Erro Relativo Gradiente = ", errograd, " Erro Relativo Newton = ", erronewt)
 
 
-    scatter(x, y, title = "Contaminados COVID-19",label = "Casos por Semana", lw = 3)
+    scatter(x, y, title = "Aproximação Linear",label = "Casos por Semana", lw = 3)
     plot!(x -> gr[1] + gr[2]*x, label = "Gradiente", c=:red, lw=3)
     plot!(x -> nt[1] + nt[2]*x, label = "Newton", c=:green, lw=3)
     xlabel!("Semanas")
-    ylabel!("Número de Casos")
+    ylabel!("Número de Casos de COVID-19")
     png("AproxLin")
 
     A = [ones(52) x x.^2];
@@ -44,11 +44,11 @@ function main()
           " Erro Absoluto Newton =", sqrt(sum((A*nt - y).^2)))
     print(" Erro Relativo Gradiente = ", errograd, " Erro Relativo Newton = ", erronewt)
 
-    scatter(x, y, title = "Contaminados COVID-19",label = "Casos por Semana", lw = 3)
+    scatter(x, y, title = "Aproximação Quadrática",label = "Casos por Semana", lw = 3)
     plot!(x -> gr[1] + gr[2]*x + gr[3]*x.^2, label = "Gradiente", c=:red, lw=3)
     plot!(x -> nt[1] + nt[2]*x + nt[3]*x.^2, label = "Newton", c=:green, lw=3)
     xlabel!("Semanas")
-    ylabel!("Número de Casos")
+    ylabel!("Número de Casos de COVID-19")
     png("AproxQuad")
 
     A = [ones(52) x x.^2 x.^3];
@@ -70,11 +70,11 @@ function main()
     print(" Erro Relativo Gradiente = ", errograd, " Erro Relativo Newton = ", erronewt)
 
 
-    scatter(x, y, title = "Contaminados COVID-19",label = "Casos por Semana", lw = 3)
+    scatter(x, y, title = "Aproximação Cúbica",label = "Casos por Semana", lw = 3)
     plot!(x -> gr[1] + gr[2]*x + gr[3]*x.^2 + gr[4]*x.^3, label = "Gradiente", c=:red, lw=3)
     plot!(x -> nt[1] + nt[2]*x + nt[3]*x.^2 + nt[4]*x.^3, label = "Newton", c=:green, lw=3)
     xlabel!("Semanas")
-    ylabel!("Número de Casos")
+    ylabel!("Número de Casos de COVID-19")
     png("AproxCub")
 
 end
