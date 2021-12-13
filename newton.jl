@@ -6,7 +6,7 @@ function newton(A::Matrix, G:: Matrix, y::Array, g::Array, z::Array)
     f(z) = sum((A*z - y).^2)
     grad(z) = G*z - g
     hes = G
-    while norm(grad(z)) > 1e-6 && k < 10000
+    while norm(grad(z)) > 1e-4 && k < 10000
         d = -inv(hes)*grad(z)
         while f(z + t*d) > f(z) + η*t*grad(z)'*d
             t = γ*t
