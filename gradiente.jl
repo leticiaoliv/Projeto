@@ -5,7 +5,7 @@ function gradiente(A::Matrix, G:: Matrix, y::Array, g::Array, z::Array)
     η = 0.1
     f(z) = sum((A*z - y).^2)
     grad(z) = G*z - g
-    while norm(grad(z)) > 1e-6 || k < 100
+    while norm(grad(z)) > 1e-6 && k < 10000
         d = -grad(z)
         while f(z + t*d) > f(z) + η*t*grad(z)'*d
             t = γ*t
